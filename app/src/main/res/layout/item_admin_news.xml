@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    android:foreground="?attr/selectableItemBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="12dp">
+
+        <!-- News Image -->
+        <ImageView
+            android:id="@+id/iv_admin_news_image"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/bg_image_placeholder"
+            android:src="@drawable/ic_news_placeholder" />
+
+        <!-- News Content -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <!-- Title and Indicators -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+                <TextView
+                    android:id="@+id/tv_admin_news_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="News Title"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/textPrimary"
+                    android:maxLines="2"
+                    android:ellipsize="end" />
+
+                <!-- Breaking News Indicator -->
+                <ImageView
+                    android:id="@+id/iv_admin_breaking"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_breaking_news"
+                    android:layout_marginStart="4dp"
+                    android:visibility="gone" />
+
+                <!-- Trending Indicator -->
+                <ImageView
+                    android:id="@+id/iv_admin_trending"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_trending"
+                    android:layout_marginStart="4dp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <!-- Summary -->
+            <TextView
+                android:id="@+id/tv_admin_news_summary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="News summary goes here..."
+                android:textSize="12sp"
+                android:textColor="@color/textSecondary"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:layout_marginTop="4dp" />
+
+            <!-- Category and Author -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:id="@+id/tv_admin_news_category"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Technology"
+                    android:textSize="10sp"
+                    android:textColor="@color/primary"
+                    android:background="@drawable/bg_category_tag"
+                    android:paddingHorizontal="6dp"
+                    android:paddingVertical="2dp" />
+
+                <TextView
+                    android:id="@+id/tv_admin_news_author"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="By Author Name"
+                    android:textSize="10sp"
+                    android:textColor="@color/textSecondary"
+                    android:layout_marginStart="8dp"
+                    android:maxLines="1"
+                    android:ellipsize="end" />
+
+            </LinearLayout>
+
+            <!-- Published Date and Stats -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:id="@+id/tv_admin_news_published"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Jan 15, 2024"
+                    android:textSize="10sp"
+                    android:textColor="@color/textSecondary" />
+
+                <TextView
+                    android:id="@+id/tv_admin_news_stats"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="👁️ 100 | 👍 10 | 📤 5"
+                    android:textSize="10sp"
+                    android:textColor="@color/textSecondary" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
