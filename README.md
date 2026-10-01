@@ -1,65 +1,67 @@
-# 📰 Way2News Clone - SmartNews Android App
+<!-- readme-seo: bannysukumar-professional-v4 -->
 
-A comprehensive Android news application built with modern architecture patterns, featuring multi-language support, real-time notifications, and a beautiful user interface similar to Way2News.
+# Smart News
 
-[![License](https://img.shields.io/github/license/Bannysukumar/Smart-News)](https://github.com/Bannysukumar/Smart-News/blob/main/LICENSE) [![Stars](https://img.shields.io/github/stars/Bannysukumar/Smart-News)](https://github.com/Bannysukumar/Smart-News/stargazers) [![Last commit](https://img.shields.io/github/last-commit/Bannysukumar/Smart-News)](https://github.com/Bannysukumar/Smart-News/commits/main)
+Smart News is an Android news app. The Java package is `com.way2.news`. Activities cover the news list and detail, login, signup, comments, notifications, language selection, profiles, and an admin dashboard.
 
 ## Overview
 
-A comprehensive Android news application built with modern architecture patterns, featuring multi-language support, real-time notifications, and a beautiful user interface similar to Way2News.
-
-
-What is actually in the repository: `app/`, `gradle/`. GitHub reports the primary language as Java.
+`MainActivity` is the launcher class. Feature screens are activities under `app/src/main/java/com/way2/news/activities`. The repository includes `FIREBASE_SETUP.md` and `AUTHENTICATION_GUIDE.md`. The package name contains `way2`, which is the code namespace. This README uses Smart News as the project title and does not present the app as an official Way2News product.
 
 ## Features
 
+Activity classes in the source:
 
-- Multi-language Support: English, Hindi, Telugu, Tamil, Bengali, Gujarati, Marathi, Kannada, Malayalam, Punjabi
-- Category-based News: Sports, Politics, Technology, Business, Entertainment, Health, Science, World
-- Swipe Navigation: Smooth swipe gestures for browsing news
-- Offline Reading: Cache news for offline viewing
-- Bookmark System: Save favorite articles
-- Share Functionality: Share news via WhatsApp, Twitter, etc.
-- Push Notifications: Breaking news and daily digest notifications
-- Dark/Light Theme: User preference-based theming
-- Search Functionality: Search through news articles
-- User Authentication: Firebase Auth integration
-- MVVM Architecture: Clean separation of concerns
-- Firebase Integration: Real-time database, authentication, messaging
+- News details, add news, and comments
+- Login, signup, forgot password, and language selection
+- Notifications, settings, and user profile
+- Admin login, admin dashboard, and pending submissions
+- Followers and following
 
 ## Tech Stack
 
 | Technology | Where it shows up |
 |---|---|
-| Android / Gradle | Mobile application build |
+| Java | `com.way2.news` |
+| Android Gradle | `build.gradle.kts`, `gradlew` |
+| Firebase setup notes | `FIREBASE_SETUP.md` |
 
-## Project Architecture
+## Architecture
 
-Android application under app/, built with Gradle.
+Android activities in `app` → Firebase, as described by `FIREBASE_SETUP.md` in the repository.
 
 ## Project Structure
 
 ```text
 Smart-News/
-├── app/
-├── AUTHENTICATION_GUIDE.md
-├── FIREBASE_SETUP.md
-├── NAVIGATION_TEST_RESULTS.md
-├── NAVIGATION_VERIFICATION.md
+├── app/src/main/java/com/way2/news/
+├── gradle/
 ├── build.gradle.kts
-├── gradle.properties
-├── gradlew
-├── gradlew.bat
 ├── settings.gradle.kts
+├── FIREBASE_SETUP.md
+└── AUTHENTICATION_GUIDE.md
 ```
 
-## Getting Started
+## Prerequisites
+
+- Android Studio, or a JDK plus the Gradle wrapper
+
+## Installation
 
 ```bash
 git clone https://github.com/Bannysukumar/Smart-News.git
 cd Smart-News
-# Open the project in Android Studio, or run the Gradle wrapper from the repository root.
 ```
+
+Open the project in Android Studio. Follow `FIREBASE_SETUP.md` before using Firebase-backed screens.
+
+## Configuration
+
+Firebase setup steps are written in `FIREBASE_SETUP.md`. Do not commit a production `google-services.json` key material beyond what you intend to publish.
+
+## Usage
+
+Run the `app` module. Language choice is `LanguageSelectionActivity`. News reading is `NewsDetailsActivity`. Admin entry is `AdminLoginActivity`.
 
 ## Contributing
 
@@ -71,8 +73,6 @@ Licensed under MIT. See [LICENSE](LICENSE).
 
 ## Author
 
-[Banny Sukumar](https://github.com/Bannysukumar)
+Banny Sukumar
 
-- GitHub: [@Bannysukumar](https://github.com/Bannysukumar)
-- Portfolio: [adepu-sukumar.vercel.app](https://adepu-sukumar.vercel.app/)
-- LinkedIn: [Adepu Sukumar](https://www.linkedin.com/in/adepu-sukumar-59b423351)
+GitHub: https://github.com/Bannysukumar
